@@ -14,7 +14,7 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(5000);
+app.listen(80);
 console.log('Server is listening on http://localhost:5000');
 
 ReactDOM.render(<Main />, document.getElementById('root'));
