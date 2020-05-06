@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
+const indiaURL = 'https://api.covid19india.org/v2/state_district_wise.json'
 
 export const fetchData = async (country) => {
   let changeableUrl = url;
@@ -37,3 +38,17 @@ export const fetchCountries = async () => {
     return error;
   }
 };
+
+export const fetchDataIndia = async(district) =>{
+
+  if(district){
+    
+  }
+  try {
+    const { data } = await axios.get(indiaURL)
+    return data;
+    
+  } catch (error) {
+    return error
+  }
+}
