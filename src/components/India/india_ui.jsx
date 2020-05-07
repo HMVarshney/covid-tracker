@@ -7,6 +7,7 @@ const IndiaUI = (props) => {
         <div>
             <FormControl className={styles.formControl}>
                 <NativeSelect defaultValue='' onChange={(e)=>(props.onChange(e.target.value))}>
+                    <option value ="default" key='default'>Select State</option>
                     {props.stateName.map((stateName,id)=>(
                     <option
                     key={id}

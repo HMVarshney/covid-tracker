@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {fetchDataIndia} from '../../api/index'
+import {fetchDataIndia, fetchData} from '../../api/index'
 import IndiaUI from './india_ui'
 import {Bar} from 'react-chartjs-2'
 import styles from './india.module.css'
@@ -12,9 +12,18 @@ import image from '../../images/image.png';
 class IndiaTracker extends Component {
 
     async componentDidMount(){
+        try{
         const data = await fetchDataIndia();
+        const IndiaData = await fetchData('India');
         this.setState({districtData:data.map(({districtData})=>(districtData)), 
-        stateName:data.map(({state})=>(state))});
+        stateName:data.map(({state})=>(state)),
+        districtDataBar:[{confirmed:IndiaData.confirmed.value, deaths:IndiaData.deaths.value}]
+    });
+        }
+        catch(error){
+            console.log(error);
+            
+        }
     }
     
     state = { 
@@ -22,10 +31,11 @@ class IndiaTracker extends Component {
         districtData:[[{}]],
         showGraph:false,
         stateToShow:'',
+        sample:{},
         districtDataBar:[{
-            district:'Select State',
-            confirmed:0,
-            deaths:0
+            district:['Confirmed', 'Deaths'],
+            confirmed:[0],
+            deaths:[0]
         }]
         
     }
@@ -48,20 +58,20 @@ class IndiaTracker extends Component {
 
 
     render(){ 
-        
-        
         if(!this.state.districtData[[32]]){
             return(
                 <div>Loading..</div>
             )
         }else
         return (
-           <div>
-               <img className={styles.image} src={image} alt="COVID-19" />
-               <Cards data={this.state.districtDataBar} />
-               <IndiaUI onChange={this.handleStateChange} stateName={this.state.stateName} />
-               <Charts data={this.state.districtDataBar} />
-           </div>
+            <div>
+                <div className={styles.container}> 
+                        <img className={styles.image} src={image} alt="COVID-19" />
+                        <Cards data={this.state.districtDataBar} />
+                        <IndiaUI onChange={this.handleStateChange} stateName={this.state.stateName} />
+                        <Charts data={this.state.districtDataBar} />
+                </div>
+            </div>
         )
          
 }
@@ -71,9 +81,10 @@ class Charts extends Component{
 
     state={
         chartData:{
-            labels:this.props.data.map(({district})=>(district)),
+            labels:this.props.data.district,
             datasets:[{
                 data:0,
+                label:['State not selected'],
                 backgroundColor:'black'
             }]
         }
@@ -101,9 +112,12 @@ class Charts extends Component{
     render(){
         
         return(
-            <div className={styles.container}>
+            <div className={styles.containerChart}>
                 <Bar 
                     data={this.state.chartData}
+                    options={{
+                        maintainAspectRatio: true
+                    }}
                 />
             </div>
         )
@@ -112,7 +126,6 @@ class Charts extends Component{
 }
 
 const Cards = (props) => {
-    console.log(props.data);
     
     const sum = (total,num)=>{
         return total+num;
@@ -125,8 +138,6 @@ const Cards = (props) => {
 
         return {totalConfirmed,totaldeaths};
     }
-
-    console.log(totalValue());
 
     return ( 
         
