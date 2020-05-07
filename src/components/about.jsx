@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const About = () => {
     return ( 
@@ -13,7 +13,7 @@ const About = () => {
                     as a pandemic by the World Health Organization (WHO) on 11 March 2020[1],[2].
                     This app has been created to give a clear picture of the situation world-wide and
                     in your country.</p>
-                    <p>Stay Safe! Stay Home! Hope we all rise from this pandemic and become the better
+                    <p>Stay Home! Stay Safe! Hope we all rise from this pandemic and become the better
                         version of ourselves.</p>
                 <div class='createdByText'>
                     <p>Web App created using React.</p>

@@ -148,7 +148,7 @@ const Cards = (props) => {
             <Grid item xs={12} md={3} component={Card} className={cx(styles.card, styles.deaths)}>
                 <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                    Confirmed
+                    Deaths
                 </Typography>
                 <Typography variant="h5" component="h2">
                 <CountUp start={0} end={totalValue().totaldeaths} duration={1.5} separator="," />
