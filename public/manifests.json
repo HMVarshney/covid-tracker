@@ -1,8 +1,8 @@
 {
-    "name": "Christine Dodrill",
-    "short_name": "Christine",
+    "name": "Covid-Tracker",
+    "short_name": "Covid-Tracker",
     "theme_color": "#ffcbe4",
-    "background_color": "#fa99ca",
+    "background_color": "#808080",
     "display": "standalone",
     "scope": "/",
     "start_url": "https://christine.website/",
