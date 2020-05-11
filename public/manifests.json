@@ -5,12 +5,12 @@
     "background_color": "#808080",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://christine.website/",
-    "description": "Blog and Resume for Christine Dodrill",
+    "start_url": "https://covid-tracker-india.netlify.app/",
+    "description": "Corona Virus Tracker- Global and specifically India",
     "orientation": "any",
     "icons": [
         {
-            "src": "https://christine.website/static/img/avatar.png",
+            "src": "./logo512.png",
             "sizes": "1024x1024"
         }
     ]
