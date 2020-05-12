@@ -4,23 +4,23 @@
     "theme_color": "#ffcbe4",
     "background_color": "#808080",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "https://covid-tracker-india.netlify.app/",
+    "scope": ".",
+    "start_url": "./",
     "description": "Corona Virus Tracker- Global and specifically India",
     "orientation": "any",
     "icons": [
         {
-            "src": "/favicon.ico",
+            "src": "/favicon.png",
             "sizes": "1024x1024"
         },
 
 	{
-	    "src": "/favicon.ico",
+	    "src": "/favicon.png",
 	    "sizes": "512x512"
 	},
 
 	{
-	    "src": "/favicon.ico",
+	    "src": "/favicon.png",
 	    "sizes": "192x192"
 	}
     ]

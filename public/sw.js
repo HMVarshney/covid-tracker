@@ -17,6 +17,21 @@ self.addEventListener("fetch", function(event) {
   event.waitUntil(addToCache(event.request));
 });
 
+
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  console.log('installing sw');
+  event.waitUntil(
+      caches.open(CACHE_NAME)
+          .then(function(cache) {
+              console.log('Opened cache');
+              var x = cache.addAll(urlsToCache);
+              console.log('cache added');
+              return x;
+          })
+  );
+});
+
 var checkResponse = function(request){
   return new Promise(function(fulfill, reject) {
     fetch(request).then(function(response){
