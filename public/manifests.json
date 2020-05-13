@@ -1,27 +1,15 @@
 {
-    "name": "Covid-Tracker",
-    "short_name": "Covid-Tracker",
-    "theme_color": "#ffcbe4",
-    "background_color": "#808080",
-    "display": "standalone",
-    "scope": ".",
-    "start_url": "./",
-    "description": "Corona Virus Tracker- Global and specifically India",
-    "orientation": "any",
-    "icons": [
-        {
-            "src": "/favicon.png",
-            "sizes": "1024x1024"
-        },
-
-	{
-	    "src": "/favicon.png",
-	    "sizes": "512x512"
-	},
-
-	{
-	    "src": "/favicon.png",
-	    "sizes": "192x192"
-	}
-    ]
+  "short_name": "Covid-Tracker",
+  "name": "Covid-Tracker",
+  "icons": [
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
