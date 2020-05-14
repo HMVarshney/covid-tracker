@@ -4,7 +4,8 @@ var urlsToCache = [
   '/india',
   '/about',
   'india.module.css',
-  'App.module.css'
+  'App.module.css',
+  '/index.html'
 ];
 
 // Install a service worker
