@@ -10,7 +10,7 @@ const About = () => {
                     province with a population of 11 million, after an outbreak of 
                     pneumonia without an obvious cause. The virus has now spread to over 
                     200 countries and territories across the globe, and was characterised 
-                    as a pandemic by the World Health Organization (WHO) on 11 March 2020[1],[2].
+                    as a pandemic by the World Health Organization (WHO) on 11 March 2020.
                     This app has been created to give a clear picture of the situation world-wide and
                     in your country.</p>
                     <p>Stay Home! Stay Safe! Hope we all rise from this pandemic and become the better
