@@ -116,7 +116,7 @@ class Charts extends Component{
                 <Bar 
                     data={this.state.chartData}
                     options={{
-                        maintainAspectRatio: true
+                        maintainAspectRatio: false,
                     }}
                 />
             </div>

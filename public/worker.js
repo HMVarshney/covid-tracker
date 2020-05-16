@@ -1,4 +1,4 @@
-var CACHE_NAME = 'covid-tracker';
+var CACHE_NAME = 'Covid-tracker';
 var urlsToCache = [
   '/',
   '/india',
