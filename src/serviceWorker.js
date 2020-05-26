@@ -10,7 +10,6 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
 
-importScripts("https://cdn.pushalert.co/sw-22336.js");
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
