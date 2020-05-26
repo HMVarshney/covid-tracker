@@ -1,3 +1,5 @@
+importScripts("https://cdn.pushalert.co/sw-22336.js");
+
 var CACHE_NAME = 'Covid-tracker';
 var urlsToCache = [
   '/',
